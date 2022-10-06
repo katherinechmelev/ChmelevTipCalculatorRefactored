@@ -22,6 +22,7 @@ public class TipRunner {
             if(cost != -1) {
                 tipCalc.addMeal(cost);
             }
+
         }
 
         System.out.println("-----------------");
