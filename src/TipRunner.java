@@ -10,14 +10,14 @@ public class TipRunner {
         System.out.print("How many people are in your group? ");
         int numberOfGuests = scan.nextInt();
         scan.nextLine();
-        System.out.print("What is the tip percentage?" );
+        System.out.print("What is the tip percentage? ");
         int tip = scan.nextInt();
         scan.nextLine();
         TipCalculator tipCalc = new TipCalculator(numberOfGuests,tip);
 
         double cost = 0.0;
         while (cost !=-1){
-            System.out.println("Enter a cost in dollars and cents, e.g. 12.50 (-1 to end): ");
+            System.out.print("Enter a cost in dollars and cents, e.g. 12.50 (-1 to end): ");
             cost = scan.nextDouble();
             if(cost != -1) {
                 tipCalc.addMeal(cost);
@@ -27,12 +27,12 @@ public class TipRunner {
 
         System.out.println("-----------------");
 
-        System.out.print("Total Bill Before Tip: " + formatter.format(tipCalc.getTotalBillBeforeTip()));
-        System.out.print("Tip Percentage: " + tipCalc.getTipPercentage());
-        System.out.print("Total Tip: " + tipCalc.tipAmount());
-        System.out.print("Total Bill With Tip: " + formatter.format(tipCalc.totalBill()));
-        System.out.print("Per Person Cost Before Tip: " + formatter.format(tipCalc.perPersonCostBeforeTip()));
-        System.out.print("Tip Per Person: " + formatter.format(tipCalc.perPersonTipAmount()));
-        System.out.print("Total Cost Per Person: " + formatter.format(tipCalc.perPersonTotalCost()));
+        System.out.println("Total Bill Before Tip: " + formatter.format(tipCalc.getTotalBillBeforeTip()));
+        System.out.println("Tip Percentage: " + tipCalc.getTipPercentage());
+        System.out.println("Total Tip: " + formatter.format(tipCalc.tipAmount()));
+        System.out.println("Total Bill With Tip: " + formatter.format(tipCalc.totalBill()));
+        System.out.println("Per Person Cost Before Tip: " + formatter.format(tipCalc.perPersonCostBeforeTip()));
+        System.out.println("Tip Per Person: " + formatter.format(tipCalc.perPersonTipAmount()));
+        System.out.println("Total Cost Per Person: " + formatter.format(tipCalc.perPersonTotalCost()));
     }
 }

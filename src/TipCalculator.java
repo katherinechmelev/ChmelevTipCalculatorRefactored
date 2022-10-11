@@ -1,9 +1,8 @@
 import java.util.Scanner;
-import java.text.DecimalFormat;
 
 public class TipCalculator {
     public int numPeople;
-    public int tipPercentage;
+    public double tipPercentage;
     public double totalBillBeforeTip;
 
     Scanner scan = new Scanner (System.in);
@@ -23,12 +22,12 @@ public class TipCalculator {
         return totalBillBeforeTip;
     }
 
-    public int getTipPercentage(){
+    public double getTipPercentage(){
         return tipPercentage;
     }
 
     public double tipAmount(){
-        return tipPercentage*totalBillBeforeTip;
+        return (tipPercentage/100) * totalBillBeforeTip ;
     }
 
     public double totalBill(){
